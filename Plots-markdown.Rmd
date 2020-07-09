@@ -2,7 +2,7 @@
 title: "Plots markdown"
 author: "Paige Lee"
 date: "7/9/2020"
-output: github_document
+output: html_document
 ---
 
 ###Density plot of CpG coverage of the first two samples of errbs5916
