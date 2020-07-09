@@ -1,3 +1,4 @@
+library(tidyverse)
 load("errbs5916_site_coverage_mat")
 no_nas_errbs5916 <- na.omit(errbs5916_site_coverage_mat)
 small_matrix_4 <- no_nas_errbs5916[1:1000000, 1:2] #create smaller matrix of first 1 million rows and first 2 samples
