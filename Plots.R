@@ -1,4 +1,5 @@
 load("errbs5916_site_coverage_mat")
+no_nas_errbs5916 <- na.omit(errbs5916_site_coverage_mat)
 small_matrix_4 <- no_nas_errbs5916[1:1000000, 1:2] #create smaller matrix of first 1 million rows and first 2 samples
 two_columns_4 <- as_tibble(small_matrix_4) %>% gather(Sample, Cpg.Coverage) %>% filter(Cpg.Coverage >=10)
 #put this data into two columns "Sample" and "Cpg.Coverage" and filter it for at least 10x coverage
