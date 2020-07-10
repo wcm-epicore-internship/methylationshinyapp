@@ -79,3 +79,10 @@ p
 ggplot(p, aes(x=Project, y=Count)) + geom_boxplot() + coord_flip()
 #Boxplots of each project, comparing their numbers of CpG sites with at least 10x coverage
 ```
+
+###Boxplots of each project, comparing their mean CpG coverage (≥10x coverage)
+
+```{r, cache=FALSE}
+ggplot(p, aes(x=Project, y=Mean)) + geom_boxplot() + coord_flip()
+#Boxplots of each project, comparing their mean CpG coverage with at least 10x coverage
+```
