@@ -5,7 +5,7 @@ two_columns_4 <- as_tibble(small_matrix_4) %>% gather(Sample, Cpg.Coverage) %>% 
 #put this data into two columns "Sample" and "Cpg.Coverage," drop NAs, filter it for at least 10x coverage
 ggplot(two_columns_4, aes(x=Cpg.Coverage, color = Sample)) + geom_density() + xlim(c(0,1000))
 #density plot of the CpG coverage of the first two samples/columns of errbs5916; most sites are covered 0-250x.
-save(two_columns_4, file = "errbs5916_first_two_samples_10x_noNA") #make the data easier to load
+save(two_columns_4, file = "errbs5916_first_two_samples_10x_noNA.rda") #make the data easier to load
 
 small_matrix_1 <- errbs5916_site_coverage_mat[1:1000000, 1:10] #make a smaller matrix from errbs5916
 #this matrix contains the first one million rows and the first ten samples
@@ -17,7 +17,7 @@ ggplot(two_columns, aes(x=Sample, y=Cpg.Coverage)) + geom_boxplot(outlier.size =
 #the geom_boxplot function makes the ggplot a boxplot, and you can give the size of outliers
 #coord_flip rotates the boxplot and sets the domain for CpG.Coverage
 #From the boxplots, we can see the median CpG coverage in most of the 10 samples is between 0 and 200 
-save(two_columns, file = "errbs5916_first_ten_samples_10x_noNA") #make the data easier to load
+save(two_columns, file = "errbs5916_first_ten_samples_10x_noNA.rda") #make the data easier to load
 
 library(tidyverse)
 rrbs5910_10x_noNA <- rrbs5910 %>% gather(Sample, Cpg.Coverage) %>% drop_na() %>% filter(Cpg.Coverage >=10) 
@@ -61,7 +61,7 @@ p <- bind_rows(test1, test2, test3, test4, test5, test6)
 p
 ggplot(p, aes(x=Project, y=Count)) + geom_boxplot() + coord_flip()
 #Boxplots of each project, comparing their numbers of CpG sites with at least 10x coverage
-save(p, file = "all_projects.sample_count_mean")
+save(p, file = "all_projects.sample_count_mean.rda")
 
 ggplot(p, aes(x=Project, y=Mean)) + geom_boxplot() + coord_flip()
 #Boxplots of each project, comparing their mean CpG coverage with at least 10x coverage
