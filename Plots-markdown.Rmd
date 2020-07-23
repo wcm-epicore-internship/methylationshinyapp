@@ -5,7 +5,7 @@ date: "7/9/2020"
 output: html_document
 ---
 
-### Density plot of CpG coverage of the first two samples of errbs5916
+### Density plot of CG coverage of the first two samples of errbs5916
 
 ```{r, cache=FALSE}
 library(tidyverse)
@@ -14,21 +14,21 @@ load("errbs5916_first_two_samples_10x_noNA")
 ggplot(two_columns_4, aes(x=Cpg.Coverage, color = Sample)) + geom_density() + xlim(c(0,1000))
 ```
 
-### Boxplots of CpG coverage of the first ten samples of errbs5916
+### Boxplots of CG coverage of the first ten samples of errbs5916
 
 ```{r, cache=FALSE}
 load("errbs5916_first_ten_samples_10x_noNA")
 ggplot(two_columns, aes(x=Sample, y=Cpg.Coverage)) + geom_boxplot(outlier.size = -1) + coord_flip(ylim = c(0,500))
 ```
 
-### Boxplots of each project, comparing their numbers of CpG sites with at least 10x coverage
+### Boxplots of each project, comparing their numbers of CG units with at least 10x coverage
 
 ```{r, cache=FALSE}
 load("all_projects.sample_count_mean")
 ggplot(p, aes(x=Project, y=Count)) + geom_boxplot() + coord_flip()
 ```
 
-### Boxplots of each project, comparing their mean CpG coverage (≥10x coverage)
+### Boxplots of each project, comparing their mean CG coverage (≥10x coverage)
 
 ```{r, cache=FALSE}
 load("all_projects.sample_count_mean")
