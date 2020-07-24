@@ -77,7 +77,14 @@ ggplot(q, aes(x=Project, y=Count)) + geom_point(size=2, aes(color = Project)) + 
 
 ### Dot plot of the number of CG units with at least 5x coverage in each project with the medians for each shown
 
-```{r, cache = FALSE}
+```{r, cache=FALSE}
 ggplot(q, aes(x=Project, y=Count)) + geom_dotplot(binaxis="y", stackdir = "center", dotsize=0.3, aes(fill = Project)) + 
+  coord_flip() + stat_summary(fun = median, fun.min = median, fun.max = median, geom = "crossbar", width = 0.5)
+```
+
+### Dot plot of the mean number of CG units with at least 5x coverage in each project with the medians for each shown
+
+```{r, cache=FALSE}
+ggplot(q, aes(x=Project, y=Mean)) + geom_dotplot(binaxis="y", stackdir = "center", dotsize=0.3, aes(fill = Project)) + 
   coord_flip() + stat_summary(fun = median, fun.min = median, fun.max = median, geom = "crossbar", width = 0.5)
 ```
