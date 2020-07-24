@@ -34,3 +34,50 @@ ggplot(p, aes(x=Project, y=Count)) + geom_boxplot() + coord_flip()
 load("all_projects.sample_count_mean.rda")
 ggplot(p, aes(x=Project, y=Mean)) + geom_boxplot() + coord_flip()
 ```
+
+### Scatterplot of the number of CG units with at least 10x coverage in each project with the medians for each shown
+
+```{r, cache=FALSE}
+ggplot(p, aes(x=Project, y=Count)) + geom_point(size=2, aes(color = Project)) + coord_flip()
+```
+
+### Dot plot of the number of CG units with at least 10x coverage in each project with the medians for each shown
+
+```{r, cache=FALSE}
+ggplot(p, aes(x=Project, y=Count)) + geom_dotplot(binaxis="y", stackdir = "center", dotsize=0.3, aes(fill = Project)) + 
+  coord_flip() + stat_summary(fun = median, fun.min = median, fun.max = median, geom = "crossbar", width = 0.5)
+```
+
+### Dot plot of the mean number of CG units with at least 10x coverage in each project with the medians for each shown
+
+```{r, cache = FALSE}
+ggplot(p, aes(x=Project, y=Mean)) + geom_dotplot(binaxis="y", stackdir = "center", dotsize=0.3, aes(fill = Project)) + 
+  coord_flip() + stat_summary(fun = median, fun.min = median, fun.max = median, geom = "crossbar", width = 0.5)
+```
+
+### Boxplots of each project, comparing their numbers of CG units with at least 5x coverage
+
+```{r, cache=FALSE}
+load("all_projects.sample_count_mean_5x.rda")
+ggplot(q, aes(x=Project, y=Count)) + geom_boxplot() + coord_flip()
+```
+
+### Boxplots of each project, comparing their mean CG coverage with at least 5x coverage
+
+```{r, cache=FALSE}
+ggplot(q, aes(x=Project, y=Mean)) + geom_boxplot() + coord_flip()
+```
+
+### Scatterplot of the number of CG units with at least 5x coverage in each project with the medians for each shown
+
+```{r, cache=FALSE}
+ggplot(q, aes(x=Project, y=Count)) + geom_point(size=2, aes(color = Project)) + coord_flip() + 
+  stat_summary(fun = median, fun.min = median, fun.max = median, geom = "crossbar", width = 0.5)
+```
+
+### Dot plot of the number of CG units with at least 5x coverage in each project with the medians for each shown
+
+```{r, cache = FALSE}
+ggplot(q, aes(x=Project, y=Count)) + geom_dotplot(binaxis="y", stackdir = "center", dotsize=0.3, aes(fill = Project)) + 
+  coord_flip() + stat_summary(fun = median, fun.min = median, fun.max = median, geom = "crossbar", width = 0.5)
+```
