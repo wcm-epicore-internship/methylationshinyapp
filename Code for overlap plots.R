@@ -63,4 +63,5 @@ ggVennDiagram(x)
 #MAKING OVERLAP PLOT (UPSET PLOT)
 install.packages("UpSetR")
 library(UpSetR)
-upset(fromList(x), sets.bar.color = c("blue","pink"), main.bar.color = c("blue", "pink", "gray"))
+upset(fromList(x), sets.bar.color = c("blue","pink"), main.bar.color = c("blue", "pink", "gray"), set_size.show = TRUE, 
+      set_size.scale_max= 4e+06)
