@@ -1,0 +1,25 @@
+---
+title: "Overlap plots markdown"
+author: "Paige Lee"
+date: "8/5/2020"
+output: html_document
+---
+
+### Venn diagram overlap plot for CG units covered ≥10x in ≥90% of RRBS and ERRBS samples
+```{r, cache=FALSE}
+library(ggVennDiagram)
+load("rrbs_90.rda")
+load("errbs_90.rda")
+rrbs90 <- as.list(rrbs_90$Site)
+errbs90 <- as.list(errbs_90$Site)
+x <- list(RRBS=rrbs90, ERRBS=errbs90)
+ggVennDiagram(x, color = "black") 
+```
+
+### Upset overlap plot for CG units covered ≥10x in ≥90% of RRBS and ERRBS samples
+```{r, cache=FALSE}
+library(UpSetR)
+x <- list(RRBS=rrbs90, ERRBS=errbs90)
+upset(fromList(x), sets.bar.color = c("blue","pink"), main.bar.color = c("blue", "pink", "gray"), set_size.show = TRUE, 
+      set_size.scale_max= 4e+06)
+```
