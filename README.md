@@ -27,6 +27,24 @@ To develop an R Shiny app for to facilitate the visualization and comparitive an
 - Filtered the RRBS and ERRBS datasets for sites that were covered by ≥90% of all RRBS or ERRBS samples.
 - Made a venn diagram and an upset plot to compare the overlap of sites covered by ≥90% of RRBS vs. ERRBS samples.
 
+## Description of the files
+
+#### Basic metrics plots
+- "Plots markdown.pdf" contains the basic metrics plots.
+- "Basic metrics plots-markdown.Rmd" is the R markdown file used to create the PDF of the basic metrics plots.
+- "Code for basic metrics plots.R" provides the code used to create the basic metrics plots.
+- "all_projects.sample_count_mean.rda" contains all the ≥10x RRBS and ERRBS data binded together with sample, count, mean, and project columns for each site.
+- "all_projects.sample_count_mean_5x.rda" contains all the ≥5x RRBS and ERRBS data binded together with sample, count, mean, and project columns for each site.
+- "errbs5916_first_two_samples_10x_noNA.rda" contains the ≥10x data for the first two samples of the errbs5916 project, which was used in a density plot that compared the CG coverage between these two samples.
+- "errbs5916_first_ten_samples_10x_noNA.rda" contains the ≥10x data for the first ten samples of the errbs5916 project, which was used in a set of boxplots that compared the CG coverage among these ten samples.
+
+#### Overlap plots
+- "Overlap plots markdown.pdf" contains the overlap plots.
+- "Overlap plots markdown.Rmd" is the R markdown file used to create the PDF of the overlap plots.
+- "Code for overlap plots.R" provides the code used to create the overlap plots.
+- "rrbs_90.rda" contains the ≥10x data for all RRBS sites covered by ≥90% of all RRBS samples. There are site, count, mean coverage, and percent.rrbs (percent of RRBS samples that covered each site) columns for each site.
+- "errbs_90.rda" contains the ≥10x data for all ERRBS sites covered by ≥90% of all ERRBS samples. There are site, count, mean coverage, and percent.rrbs (percent of ERRBS samples that covered each site) columns for each site.
+
 ## To do
 - Create a Shiny app for interactive visual comparison of the data.
 
