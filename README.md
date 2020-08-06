@@ -1,33 +1,24 @@
 ## Overview
 To develop an R Shiny app for to facilitate the visualization and comparitive analysis of DNA methylation data obtained from Next Generation Sequencing of ERRBS and RRBS assays.
 
-### Basic metrics plots (≥10x coverage)
+#### Basic metrics plots (≥10x coverage)
 - Filtered each RRBS and ERRBS project for ≥10x coverage, grouped by sample, counted the number of CG sites and mean CG coverage for each project, and binded all projects together by row.
 - Made boxplots and scatterplots to compare each project's number of CG units. In each graph, the median number of CG sites is indicated.
 - Made boxplots and scatterplots to compare each project's mean CG coverage. In each graph, the median number of CG sites is indicated.
 
-These plots can be found in "Plots markdown.pdf"
-The code for these plots can be found in "Code for basic metrics plots.R"
 
-
-### Basic metrics plots (≥5x coverage)
+#### Basic metrics plots (≥5x coverage)
 - Filtered each RRBS and ERRBS project for ≥5x coverage, grouped by sample, counted the number of CG sites and mean CG coverage for each project, and binded all projects together by row.
 - Made boxplots and scatterplots to compare each project's number of CG units. In each graph, the median number of CG sites is indicated.
 - Made boxplots and scatterplots to compare each project's mean CG coverage. In each graph, the median number of CG sites is indicated.
 
-These plots can be found in "Plots markdown.pdf"
-The code for these plots can be found in "Code for basic metrics plots.R"
 
-
-### Overlap plots (RRBS vs. ERRBS coverage)
+#### Overlap plots (RRBS vs. ERRBS coverage)
 - Joined all RRBS data by site, filtered for ≥10x coverage, grouped by site, and counted the number of samples per site.
 - Filtered all ERRBS data for ≥10x coverage, binded all ERRBS data by row, grouped by site, and counted the number of samples per site.
 - Added a column to the RRBS and ERRBS datasets that calculated the percent of samples that covered each site.
 - Filtered the RRBS and ERRBS datasets for sites that were covered by ≥90% of all RRBS or ERRBS samples.
 - Made a venn diagram and an upset plot to compare the overlap of sites covered by ≥90% of RRBS vs. ERRBS samples.
-
-These plots can be found in "Overlap plots markdown.pdf"
-The code for these plots can be found in "Code for overlap plots.R"
 
 
 ## Background
