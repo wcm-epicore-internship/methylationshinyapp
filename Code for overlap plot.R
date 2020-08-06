@@ -47,3 +47,15 @@ rrbs_90 <- r %>% filter(r$Percent.rrbs >= 90)
 nrow(rrbs_90) #there are 2,694,292 sites covered ≥10x by ≥90% of samples in RRBS
 errbs_90 <- e %>% filter(e$Percent.errbs >= 90)
 nrow(errbs_90) #there are 2,378,895 sites covered ≥10x by ≥90% of samples in ERRBS
+
+#MAKING OVERLAP PLOT
+install.packages("ggVennDiagram")
+library(ggVennDiagram)
+
+rrbs90 <- as.list(rrbs_90$Site)
+errbs90 <- as.list(errbs_90$Site)
+x <- list(RRBS=rrbs90, ERRBS=errbs90)
+ggVennDiagram(x)
+#There are 517,347 sites that are covered ≥10x by ≥90% of samples ONLY IN RRBS
+#There are 201,950 sites that are covered ≥10x by ≥90% of samples ONLY IN ERRBS
+#There are 2,176,945 sites that are covered ≥10x by ≥90% of samples in BOTH RRBS AND ERRBS (overlap)
