@@ -48,7 +48,7 @@ nrow(rrbs_90) #there are 2,694,292 sites covered ≥10x by ≥90% of samples in 
 errbs_90 <- e %>% filter(e$Percent.errbs >= 90)
 nrow(errbs_90) #there are 2,378,895 sites covered ≥10x by ≥90% of samples in ERRBS
 
-#MAKING OVERLAP PLOT
+#MAKING OVERLAP PLOT (VENN DIAGRAM)
 install.packages("ggVennDiagram")
 library(ggVennDiagram)
 
@@ -59,3 +59,8 @@ ggVennDiagram(x)
 #There are 517,347 sites that are covered ≥10x by ≥90% of samples ONLY IN RRBS
 #There are 201,950 sites that are covered ≥10x by ≥90% of samples ONLY IN ERRBS
 #There are 2,176,945 sites that are covered ≥10x by ≥90% of samples in BOTH RRBS AND ERRBS (overlap)
+
+#MAKING OVERLAP PLOT (UPSET PLOT)
+install.packages("UpSetR")
+library(UpSetR)
+upset(fromList(x), sets.bar.color = c("blue","pink"), main.bar.color = c("blue", "pink", "gray"))
