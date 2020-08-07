@@ -1,5 +1,5 @@
 ## Overview
-To develop an R Shiny app for to facilitate the visualization and comparitive analysis of DNA methylation data obtained from Next Generation Sequencing of ERRBS and RRBS assays.
+To develop an R Shiny app to facilitate the visualization and comparitive analysis of DNA methylation data obtained from Next Generation Sequencing of ERRBS and RRBS assays.
 
 ## Background
   DNA methylation, the addition of methyl groups to a DNA molecule, is commonly known to control gene expression by repressing transcription. The methylation of a DNA segment may change the segment’s activity, and it is involved in a wide variety of processes like normal development, genomic imprinting, X-chromosome inactivation, and aging. Most mammalian DNA methylation occurs at CpG sites, which are regions of DNA with a cytosine nucleotide followed by a guanine nucleotide on the same strand. Specifically, methylation at CpG sites occurs in the cytosine. CpG islands are genomic regions where CpG sites occur at high frequencies, and the methylation of CpG islands are associated with repressing nearby genes. 
