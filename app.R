@@ -90,4 +90,3 @@ server <- function(input, output) {
 
 # Run the application 
 shinyApp(ui = ui, server = server)
-runGitHub("Methylation_shiny_app", "rstudio")
