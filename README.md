@@ -50,7 +50,7 @@ To develop an R Shiny app to facilitate the visualization and comparitive analys
 - "rrbs_90.rda" contains the ≥10x data for all RRBS sites covered by ≥90% of all RRBS samples. There are site, count, mean coverage, and percent.rrbs (percent of RRBS samples that covered each site) columns for each site.
 - "errbs_90.rda" contains the ≥10x data for all ERRBS sites covered by ≥90% of all ERRBS samples. There are site, count, mean coverage, and percent.rrbs (percent of ERRBS samples that covered each site) columns for each site.
 
-#### How to download the shiny app
+#### How to install the shiny app
 - Use this Dropbox link to download the following files: https://wcm.box.com/s/w7zlho18eqeveh94jwr7vq3c6bdwb53n
   - errbs_data_for_overlap_plot_5x.rda
   - errbs_data_for_overlap_plot.rda
@@ -58,7 +58,7 @@ To develop an R Shiny app to facilitate the visualization and comparitive analys
   - rrbs_data_for_overlap_plot_5x.rda
   - all_projects.sample_count_mean.rda
   - all_projects.sample_count_mean_5x.rda
-- Use the code in "app.R" uploaded to this repository to run the shiny app in R.
+- Use the code in "app.R" uploaded to this repository to run the shiny app in R Studio.
 
 ## Useful Links
 - [GitHub and RStudio](https://resources.github.com/whitepapers/github-and-rstudio/)
