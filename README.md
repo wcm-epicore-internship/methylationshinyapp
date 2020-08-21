@@ -51,6 +51,7 @@ To develop an R Shiny app to facilitate the visualization and comparitive analys
 - "errbs_90.rda" contains the ≥10x data for all ERRBS sites covered by ≥90% of all ERRBS samples. There are site, count, mean coverage, and percent.rrbs (percent of ERRBS samples that covered each site) columns for each site.
 
 #### How to install the shiny app
+The app was too large to publish on shinyapps.io with a free account, but it can be installed onto a local computer by downloading the following files from Dropbox and running the code provided in "app.R" in R Studio to run the app.
 - Use this Dropbox link to download the following files: https://wcm.box.com/s/w7zlho18eqeveh94jwr7vq3c6bdwb53n
   - errbs_data_for_overlap_plot_5x.rda
   - errbs_data_for_overlap_plot.rda
@@ -65,4 +66,3 @@ To develop an R Shiny app to facilitate the visualization and comparitive analys
 - [Shiny from RStudio](https://shiny.rstudio.com/)
 - [RRBS - Epigenomics Core website](https://epicore.med.cornell.edu/services.php?option=rrbsdescription#seq)
 - [R for Data Science](https://r4ds.had.co.nz/)
-
