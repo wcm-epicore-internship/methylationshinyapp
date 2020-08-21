@@ -27,6 +27,11 @@ To develop an R Shiny app to facilitate the visualization and comparitive analys
 - Filtered the RRBS and ERRBS datasets for sites that were covered by ≥90% of all RRBS or ERRBS samples.
 - Made a venn diagram and an upset plot to compare the overlap of sites covered by ≥90% of RRBS vs. ERRBS samples.
 
+#### Shiny app (interactive visual comparison of data)
+- Created a tab for ≥5x coverage data, featuring a scatterplot that compares the number of CG sites covered ≥5x in all projects, a scatterplot that compares the mean CG coverage for ≥5x in all projects, and an interactive venn diagram that displays the percent overlap of sites covered ≥5x between RRBS and ERRBS.
+- Created a tab for ≥10x coverage data, featuring a scatterplot that compares the number of CG sites covered ≥10x in all projects, a scatterplot that compares the mean CG coverage for ≥10x in all projects, and an interactive venn diagram that displays the percent overlap of sites covered ≥10x between RRBS and ERRBS.
+- The interactive venn diagrams in the app that display overlap between RRBS and ERRBS are modified versions of the overlap plots in "Overlap plots markdown.pdf." The datasets and code were modified to allow users to select any percent overlap (as opposed to only 90%) to be displayed in the interactive venn diagram in the app. 
+
 ## Description of the files
 
 #### Basic metrics plots
@@ -44,9 +49,6 @@ To develop an R Shiny app to facilitate the visualization and comparitive analys
 - "Code for overlap plots.R" provides the code used to create the overlap plots.
 - "rrbs_90.rda" contains the ≥10x data for all RRBS sites covered by ≥90% of all RRBS samples. There are site, count, mean coverage, and percent.rrbs (percent of RRBS samples that covered each site) columns for each site.
 - "errbs_90.rda" contains the ≥10x data for all ERRBS sites covered by ≥90% of all ERRBS samples. There are site, count, mean coverage, and percent.rrbs (percent of ERRBS samples that covered each site) columns for each site.
-
-## To do
-- Create a Shiny app for interactive visual comparison of the data.
 
 ## Useful Links
 - [GitHub and RStudio](https://resources.github.com/whitepapers/github-and-rstudio/)
