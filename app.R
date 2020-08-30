@@ -15,7 +15,7 @@ ui <- fluidPage(
                   choices = c("10X", "5X"),
                   selected = "10X"),
       sliderInput("overlap",
-                  "% Overlap of CpG sites covered ≥5x or ≥10x by RRBS and ERRBS samples:", 
+                  "% Overlap of CpG units covered ≥5x or ≥10x by RRBS and ERRBS samples:", 
                   min = 0,
                   max = 100,
                   value = 75),
